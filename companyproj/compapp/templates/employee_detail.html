@@ -21,6 +21,17 @@
             Amount: {{ p.amount }}
         </li>
     {% endfor %}
+
+<h3>Engineers</h3>
+<ul>
+    {% for e in engineers %}
+        <li>
+            <a href="{% url 'employee_detail' employee.id %}">
+                <strong>{{ e.name }}</strong></a><br>
+            Position: {{ e.position }}<br>
+            Joined: {{ e.date_joined }}
+        </li>
+    {% endfor %}
 </ul>
 </body>
 </html>
